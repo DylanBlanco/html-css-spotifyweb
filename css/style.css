@@ -7,9 +7,14 @@ reset
     box-sizing: border-box;
 }
 :root {
+    --hover-color: #3635EC;
     --aside-color: #121212;
     --main-color: #17191f;
     --footer-color: #313131;
+    --main-header-color: #0000004b;
+    --main-text-color: white;
+    --main-content-text-color: #7a7a7a;
+    --footer-text-color: white;
     --footer-height: 100px;
     --aside-screen: 150px;
 }
@@ -24,8 +29,24 @@ color
 .main-screen {
     background-color: var(--main-color);
 }
+main header {
+    background-color: var(--main-header-color);
+}
+main header a {
+    color: var(--main-text-color);
+}
+main nav ul button {
+    color: var(--main-content-text-color);
+}
+main nav ul button:hover {
+    color: var(--hover-color);
+}
 footer {
     background-color: var(--footer-color);
+    color: var(--footer-text-color);
+}
+footer .col button {
+    color: var(--footer-text-color);
 }
 
 /***********************
@@ -37,9 +58,17 @@ general
 footer {
     height: var(--footer-height);
 }
+main header {
+    height: 80px;
+    position: sticky;
+}
 .main-screen {
     width: calc(100vw - var(--aside-screen));
     height: 100%;
+}
+.main-screen nav {
+    height: 30px;
+    margin-top: 20px;
 }
 body .row {
     display: flex;
@@ -50,7 +79,6 @@ body .row {
 img {
     max-width: 100%;
 }
-
 
 /***********************
 UPPER SCREEN
@@ -69,13 +97,38 @@ aside
 /***********************
 main
 ***********************/
+/*HEADER MAIN*/
+main header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+main header a{
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 25px;
+}
+main header div{
+    padding-right: 20px;
+}
+
+/*MAIN NAV*/
+main nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+main nav ul button{
+    background: none;
+    border: none;
+}
 
 /***********************
 footer
 ***********************/
 footer {
     padding: 0 10px;
-    color: white;
 }
 footer .col {
     width: 30%;
@@ -91,17 +144,38 @@ footer .col i {
     display: flex;
     align-items: center;
 }
-.col-footer-cntr {
-    text-align: center;
-}
 .col-footer-dx {
     text-align: end;
 }
+.col-footer-cntr .mixer-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .col-footer-sx button .fa-regular {
+    font-size: 1rem;
+}
+footer .col button {
+    background:none;
+    border: none;
+}
+footer button .fa-solid {
+    font-size: 1rem;
+}
+footer button .fa-regular {
+    font-size: 1.5rem;
+}
+.col-footer-cntr .mixer-bottom {
+    display: flex;
+    justify-content: center;
+}
 .track-bar {
-    height: 10px;
-    width: 80px;
-    margin: 50px;
-    color: beige;
+    background-color: white;
+    height: 2px;
+}
+.track-bar-row {
+    background-color: white;
 }
 
 /***********************
