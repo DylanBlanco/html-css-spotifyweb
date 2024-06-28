@@ -63,8 +63,7 @@ main header {
     position: sticky;
 }
 .main-screen {
-    width: calc(100vw - var(--aside-screen));
-    height: 100%;
+    width: calc(100vw - var(--aside-screen) - 20px);
 }
 .main-screen nav {
     height: 30px;
@@ -122,6 +121,21 @@ main nav ul {
 main nav ul button{
     background: none;
     border: none;
+}
+
+/*MAIN CARD*/
+main {
+    overflow-y: auto;
+}
+main .row {
+    display: flex;
+    justify-content: space-between;
+}
+main .row .card{
+    width: calc(100%/8);
+}
+main .second-row .row, main .third-row .row {
+    justify-content: flex-start;
 }
 
 /***********************
