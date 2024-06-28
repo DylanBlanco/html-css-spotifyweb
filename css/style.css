@@ -14,7 +14,7 @@ reset
     --main-header-color: #0000004b;
     --main-text-color: white;
     --main-content-text-color: #7a7a7a;
-    --footer-text-color: white;
+    --text-color: white;
     --footer-height: 100px;
     --aside-screen: 150px;
 }
@@ -43,10 +43,10 @@ main nav ul button:hover {
 }
 footer {
     background-color: var(--footer-color);
-    color: var(--footer-text-color);
+    color: var(--text-color);
 }
 footer .col button {
-    color: var(--footer-text-color);
+    color: var(--text-color);
 }
 
 /***********************
@@ -78,7 +78,16 @@ body .row {
 img {
     max-width: 100%;
 }
-
+h3, h4 {
+    color: var(--text-color);
+}
+h1 {
+    color: var(--text-color);
+}
+h4 {
+    color: var(--main-content-text-color);
+    font-size: 0.8rem;
+}
 /***********************
 UPPER SCREEN
 ***********************/
@@ -127,9 +136,14 @@ main nav ul button{
 main {
     overflow-y: auto;
 }
+main .first-row {
+    padding-top: 30px;
+}
 main .row {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
 }
 main .row .card{
     width: calc(100%/8);
@@ -138,6 +152,19 @@ main .second-row .row, main .third-row .row {
     justify-content: flex-start;
 }
 
+main .second-row .card {
+    margin-right: 50px;
+}
+main .third-row .card {
+    margin-right: 50px;
+}
+
+main .second-row {
+    padding: 30px 0;
+}
+main .third-row {
+    padding: 30px 0;
+}
 /***********************
 footer
 ***********************/
