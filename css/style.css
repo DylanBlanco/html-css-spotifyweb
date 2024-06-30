@@ -26,6 +26,12 @@ color
 .aside-screen {
     background-color: var(--aside-color);
 }
+.aside-screen .row i {
+    color: var(--main-content-text-color);
+}
+.aside-screen .row .footer .user {
+    color: var(--main-text-color);
+}
 .main-screen {
     background-color: var(--main-color);
 }
@@ -55,6 +61,13 @@ general
 .upper-screen {
     height: calc(100vh - var(--footer-height));
 }
+.aside-screen {
+    width: var(--aside-screen);
+}
+.aside-screen img {
+    width: 100%;
+}
+
 footer {
     height: var(--footer-height);
 }
@@ -88,6 +101,9 @@ h4 {
     color: var(--main-content-text-color);
     font-size: 0.8rem;
 }
+ul {
+    list-style: none;
+}
 /***********************
 UPPER SCREEN
 ***********************/
@@ -98,8 +114,9 @@ UPPER SCREEN
 /***********************
 aside
 ***********************/
-.aside-screen {
-    width: var(--aside-screen);
+.aside-screen .row ul li {
+    display: flex;
+    height: 30px;
 }
 
 /***********************
@@ -147,6 +164,7 @@ main .row {
 }
 main .row .card{
     width: calc(100%/8);
+    text-align: center;
 }
 main .second-row .row, main .third-row .row {
     justify-content: flex-start;
