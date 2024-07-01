@@ -16,7 +16,7 @@ reset
     --main-content-text-color: #7a7a7a;
     --text-color: white;
     --footer-height: 100px;
-    --aside-screen: 150px;
+    --aside-screen: 350px;
 }
 
 
@@ -41,11 +41,14 @@ main header {
 main header a {
     color: var(--main-text-color);
 }
-main nav ul button {
+main .main-nav ul a {
     color: var(--main-content-text-color);
 }
 main nav ul button:hover {
     color: var(--hover-color);
+}
+main .row .card .hover-img i {
+    color: white;
 }
 footer {
     background-color: var(--footer-color);
@@ -67,7 +70,9 @@ general
 .aside-screen img {
     width: 100%;
 }
-
+.upper-screen .main-screen {
+    width: 100%;
+}
 footer {
     height: var(--footer-height);
 }
@@ -81,6 +86,9 @@ main header {
 .main-screen nav {
     height: 30px;
     margin-top: 20px;
+}
+main .main-nav ul a {
+    text-decoration: none;
 }
 body .row {
     display: flex;
@@ -104,6 +112,9 @@ h4 {
 ul {
     list-style: none;
 }
+.upper-screen .aside-screen .row .display-none {
+    display: none;
+}
 /***********************
 UPPER SCREEN
 ***********************/
@@ -114,6 +125,14 @@ UPPER SCREEN
 /***********************
 aside
 ***********************/
+
+.upper-screen .aside-screen .header div {
+    width: 80%;
+    padding: 30px 10px;
+}
+.aside-screen .row ul {
+    padding-left: 10px;
+}
 .aside-screen .row ul li {
     display: flex;
     height: 30px;
@@ -165,6 +184,16 @@ main .row {
 main .row .card{
     width: calc(100%/8);
     text-align: center;
+}
+main .row .card .hover-img {
+    position: relative;
+}
+main .row .card .hover-img i {
+    display: none;
+    position: absolute;
+    font-size: 2rem;
+    left: 50%;
+    top: 50%;
 }
 main .second-row .row, main .third-row .row {
     justify-content: flex-start;
@@ -229,22 +258,49 @@ footer button .fa-regular {
     display: flex;
     justify-content: center;
 }
-.track-bar {
-    background-color: white;
-    height: 2px;
+/***********************
+HOVER
+***********************/
+main .row .card div :hover {
+    display: block;
 }
-.track-bar-row {
-    background-color: white;
+.hover-text :hover {
+    color: white;
 }
 
 /***********************
 responsive
 ***********************/
 @media screen and (max-width:1100px) {
-    
+    main .first-row .card {
+        width: 20%;
+    }
 }
 
 
 @media screen and (max-width:700px) {
-    
+    main .first-row .card {
+        width: 45%;
+    }
+    main .second-row .card {
+        width: calc(100% / 2 - 50px);
+    }
+    main .third-row .card {
+        width: calc(100% / 2 - 50px);
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .upper-screen .aside-screen {
+        width: 200px;
+    }
+    .upper-screen .aside-screen .row {
+        display: none;
+    }
+    .display-none {
+        display: block;
+        color: white;
+        width:50px;
+    }
 }
