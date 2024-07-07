@@ -47,9 +47,6 @@ main .main-nav ul a {
 main nav ul button:hover {
     color: var(--hover-color);
 }
-main .row .card .hover-img i {
-    color: white;
-}
 footer {
     background-color: var(--footer-color);
     color: var(--text-color);
@@ -57,7 +54,7 @@ footer {
 footer .col button {
     color: var(--text-color);
 }
-
+block
 /***********************
 general
 ***********************/
@@ -126,6 +123,11 @@ UPPER SCREEN
 aside
 ***********************/
 
+.upper-screen .aside-screen .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .upper-screen .aside-screen .header div {
     width: 80%;
     padding: 30px 10px;
@@ -185,16 +187,7 @@ main .row .card{
     width: calc(100%/8);
     text-align: center;
 }
-main .row .card .hover-img {
-    position: relative;
-}
-main .row .card .hover-img i {
-    display: none;
-    position: absolute;
-    font-size: 2rem;
-    left: 50%;
-    top: 50%;
-}
+
 main .second-row .row, main .third-row .row {
     justify-content: flex-start;
 }
@@ -256,18 +249,43 @@ footer button .fa-regular {
 }
 .col-footer-cntr .mixer-bottom {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.col-footer-cntr .mixer-bottom .track-bar-row {
+    width: 80%;
+    height: 4px;
+    background-color: #7a7a7a;
+}
+.col-footer-cntr .mixer-bottom .track-bar-row .track-bar{
+    width: 20%;
+    height: 4px;
+    background-color: white;
 }
 /***********************
 HOVER
 ***********************/
-main .row .card div :hover {
-    display: block;
-}
 .hover-text :hover {
     color: white;
 }
 
+main .row .card .secondary-img {
+    display: none;
+}
+main .row .card .hover-card {
+    position: relative;
+}
+main .row .hover-card:hover .secondary-img {
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+main .row .hover-card:hover img {
+    opacity: 50%;
+}
 /***********************
 responsive
 ***********************/
@@ -299,7 +317,7 @@ responsive
         display: none;
     }
     .display-none {
-        display: block;
+        display: inline-block;
         color: white;
         width:50px;
     }
